@@ -2,7 +2,7 @@ use cosmwasm_schema::{export_schema, remove_schemas, schema_for};
 use std::env::current_dir;
 use std::fs::create_dir_all;
 
-use onft::{msg::ONFTExecuteMsg, query::ONFTQuery, types::*};
+use onft_bindings::{msg::ONFTExecuteMsg, query::ONFTQuery, types::*};
 
 
 fn main() {

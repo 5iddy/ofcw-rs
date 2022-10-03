@@ -1,5 +1,5 @@
 [package]
-name = "onft"
+name = "onft-bindings"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true

@@ -1,0 +1,1 @@
+# OmniflixHub Cosmwasm Bindings
