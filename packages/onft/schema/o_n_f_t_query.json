@@ -1,0 +1,195 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ONFTQuery",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "collection"
+      ],
+      "properties": {
+        "collection": {
+          "type": "object",
+          "required": [
+            "denom_id"
+          ],
+          "properties": {
+            "denom_id": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "denom"
+      ],
+      "properties": {
+        "denom": {
+          "type": "object",
+          "required": [
+            "denom_id"
+          ],
+          "properties": {
+            "denom_id": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "query_denoms_request"
+      ],
+      "properties": {
+        "query_denoms_request": {
+          "type": "object",
+          "required": [
+            "owner"
+          ],
+          "properties": {
+            "owner": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "o_n_f_t"
+      ],
+      "properties": {
+        "o_n_f_t": {
+          "type": "object",
+          "required": [
+            "denom_id",
+            "id"
+          ],
+          "properties": {
+            "denom_id": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "owner_o_n_f_ts"
+      ],
+      "properties": {
+        "owner_o_n_f_ts": {
+          "type": "object",
+          "required": [
+            "denom_id",
+            "owner"
+          ],
+          "properties": {
+            "denom_id": {
+              "type": "string"
+            },
+            "owner": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "supply"
+      ],
+      "properties": {
+        "supply": {
+          "type": "object",
+          "required": [
+            "denom_id",
+            "owner"
+          ],
+          "properties": {
+            "denom_id": {
+              "type": "string"
+            },
+            "owner": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "o_n_f_t_collection"
+      ],
+      "properties": {
+        "o_n_f_t_collection": {
+          "type": "object",
+          "required": [
+            "denom"
+          ],
+          "properties": {
+            "denom": {
+              "$ref": "#/definitions/Denom"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  ],
+  "definitions": {
+    "Denom": {
+      "type": "object",
+      "required": [
+        "creator",
+        "description",
+        "id",
+        "name",
+        "preview_uri",
+        "schema",
+        "symbol"
+      ],
+      "properties": {
+        "creator": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "preview_uri": {
+          "type": "string"
+        },
+        "schema": {
+          "type": "string"
+        },
+        "symbol": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+[package]
+name = "onft"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+description = "Cosmwasm/Rust bindings for onft module"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+serde = {workspace=true, default-features = false, features = ["derive"]}
+schemars = {workspace=true}
+cosmwasm-std={workspace=true}
+
+[dev-dependencies]
+cosmwasm-schema = {workspace=true}

@@ -1,0 +1,232 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ONFTExecuteMsg",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "create_denom"
+      ],
+      "properties": {
+        "create_denom": {
+          "type": "object",
+          "required": [
+            "description",
+            "id",
+            "name",
+            "preview_uri",
+            "schema",
+            "sender",
+            "symbol"
+          ],
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "preview_uri": {
+              "type": "string"
+            },
+            "schema": {
+              "type": "string"
+            },
+            "sender": {
+              "type": "string"
+            },
+            "symbol": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "update_denom"
+      ],
+      "properties": {
+        "update_denom": {
+          "type": "object",
+          "required": [
+            "description",
+            "id",
+            "name",
+            "preview_uri",
+            "sender"
+          ],
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "preview_uri": {
+              "type": "string"
+            },
+            "sender": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "transfer_denom"
+      ],
+      "properties": {
+        "transfer_denom": {
+          "type": "object",
+          "required": [
+            "id",
+            "recipient",
+            "sender"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "recipient": {
+              "type": "string"
+            },
+            "sender": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "msg_mint_o_n_f_t"
+      ],
+      "properties": {
+        "msg_mint_o_n_f_t": {
+          "type": "object",
+          "required": [
+            "data",
+            "denom_id",
+            "extensible",
+            "id",
+            "nsfw",
+            "recipient",
+            "royalty_share",
+            "sender",
+            "transferable"
+          ],
+          "properties": {
+            "data": {
+              "type": "string"
+            },
+            "denom_id": {
+              "type": "string"
+            },
+            "extensible": {
+              "type": "boolean"
+            },
+            "id": {
+              "type": "string"
+            },
+            "nsfw": {
+              "type": "boolean"
+            },
+            "recipient": {
+              "type": "string"
+            },
+            "royalty_share": {
+              "$ref": "#/definitions/Decimal"
+            },
+            "sender": {
+              "type": "string"
+            },
+            "transferable": {
+              "type": "boolean"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "transfer_o_n_f_t"
+      ],
+      "properties": {
+        "transfer_o_n_f_t": {
+          "type": "object",
+          "required": [
+            "denom_id",
+            "id",
+            "recipient",
+            "sender"
+          ],
+          "properties": {
+            "denom_id": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "recipient": {
+              "type": "string"
+            },
+            "sender": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "msg_burn_o_n_f_t"
+      ],
+      "properties": {
+        "msg_burn_o_n_f_t": {
+          "type": "object",
+          "required": [
+            "denom_id",
+            "id",
+            "sender"
+          ],
+          "properties": {
+            "denom_id": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "sender": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  ],
+  "definitions": {
+    "Decimal": {
+      "description": "A fixed-point decimal value with 18 fractional digits, i.e. Decimal(1_000_000_000_000_000_000) == 1.0\n\nThe greatest possible value that can be represented is 340282366920938463463.374607431768211455 (which is (2^128 - 1) / 10^18)",
+      "type": "string"
+    }
+  }
+}

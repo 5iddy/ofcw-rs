@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Metadata",
+  "type": "object",
+  "required": [
+    "description",
+    "media_uri",
+    "name",
+    "preview_uri"
+  ],
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "media_uri": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "preview_uri": {
+      "type": "string"
+    }
+  }
+}

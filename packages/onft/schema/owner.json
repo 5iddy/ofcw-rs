@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Owner",
+  "type": "object",
+  "required": [
+    "address",
+    "id_collections"
+  ],
+  "properties": {
+    "address": {
+      "type": "string"
+    },
+    "id_collections": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/IDCollection"
+      }
+    }
+  },
+  "definitions": {
+    "IDCollection": {
+      "type": "object",
+      "required": [
+        "denom_id",
+        "onft_ids"
+      ],
+      "properties": {
+        "denom_id": {
+          "type": "string"
+        },
+        "onft_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
